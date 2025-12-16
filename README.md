@@ -37,3 +37,6 @@ ng serve /npm start
 ### Frontend runs on:
 
 http://localhost:4200
+
+## Swagger Setup
+http://localhost:3000/api-docs/#/default/get_events
