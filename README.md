@@ -31,7 +31,7 @@ cd fe
 
 npm install
 
-ng serve
+ng serve /npm start
 
 
 ### Frontend runs on:
