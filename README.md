@@ -1,4 +1,4 @@
-# fleet-diagnostics-dashboard
+# Fleet diagnostics dashboard
 
 ## Prerequisites
 
@@ -27,14 +27,14 @@ npm run truncate
 http://localhost:3000
 
 ## Swagger Setup
-http://localhost:3000/api-docs/#/default/get_events
+http://localhost:3000/api-docs
 
 ## Frontend Setup
 cd fe
 
 npm install
 
-ng serve /npm start
+npm start
 
 
 ### Frontend runs on:
