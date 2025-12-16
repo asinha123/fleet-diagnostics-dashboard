@@ -1,0 +1,16 @@
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.filter-summary-wrapper {
+  display: flex;
+  app-filter, app-summary{
+    width: 50%;
+  
+  }
+}

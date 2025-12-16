@@ -1,0 +1,31 @@
+<table>
+  <thead>
+    <tr>
+      <th>Timestamp</th>
+      <th>Vehicle</th>
+      <th>Severity</th>
+      <th>Code</th>
+      <th>Message</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let e of events$ | async">
+      <td>{{ e.timestamp | date : "dd-MM-yyyy hh:mm:ss" : "UTC" }}</td>
+      <td>{{ e.vehicleId }}</td>
+      <td>{{ e.level }}</td>
+      <td>{{ e.code }}</td>
+      <td>{{ e.message }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="pagination">
+  <button (click)="prev()" [disabled]="store.currentPage === 0">
+    Previous
+  </button>
+
+  <span>Page {{ store.currentPage + 1 }}</span>
+
+  <button (click)="next()">Next</button>
+</div>

@@ -1,0 +1,6 @@
+<h1>Fleet Diagnostics Dashboard</h1>
+<div class="filter-summary-wrapper">
+  <app-filter (filtersChanged)="onFiltersChange($event)"></app-filter>
+  <app-summary></app-summary>
+</div>
+<app-events-table></app-events-table>

@@ -1,0 +1,25 @@
+table {
+  margin-top: 5px;
+  width: 100%;
+
+  th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+}
+
+.pagination {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  button {
+
+    cursor: pointer;
+    
+    &:disabled {
+      cursor: default;
+    }
+  }
+}

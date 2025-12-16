@@ -1,0 +1,56 @@
+<form class="filter-panel" [formGroup]="filtersForm">
+  <fieldset>
+    <legend>Search & Filters</legend>
+
+    <!-- Vehicle ID -->
+    <div class="form-group">
+      <label for="vehicleId">Vehicle ID</label>
+      <input
+        id="vehicleId"
+        type="text"
+        placeholder="e.g. 1234"
+        formControlName="vehicleId"
+      />
+    </div>
+
+    <!-- Error Code -->
+    <div class="form-group">
+      <label for="code">Error Code</label>
+      <input
+        id="code"
+        type="text"
+        placeholder="e.g. U0420"
+        formControlName="code"
+      />
+    </div>
+
+    <!-- Severity -->
+    <div class="form-group">
+      <label for="level">Severity</label>
+      <select id="level" formControlName="level">
+        <option value="">All</option>
+        <option value="ERROR">ERROR</option>
+        <option value="WARN">WARN</option>
+        <option value="INFO">INFO</option>
+      </select>
+    </div>
+
+    <!-- Time Range -->
+    <div class="form-group">
+      <label for="from">From</label>
+      <input id="from" type="datetime-local" formControlName="from" />
+    </div>
+
+    <div class="form-group">
+      <label for="to">To</label>
+      <input id="to" type="datetime-local" formControlName="to" />
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button type="button" (click)="reset()" class="secondary">Reset</button>
+
+      <button type="submit" (click)="apply()" class="primary">Filter</button>
+    </div>
+  </fieldset>
+</form>
