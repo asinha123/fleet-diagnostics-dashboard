@@ -9,7 +9,6 @@ export class EventsService {
   }
 
   search(filters: any) {
-    console.log("fil", filters);
     return this.repo.find(filters);
   }
 

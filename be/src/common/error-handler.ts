@@ -1,11 +1,9 @@
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response, NextFunction } from "express";
 
 export function errorHandler(
-  err: any,
   _req: Request,
   res: Response,
   _next: NextFunction
 ) {
-  console.error(err);
-  res.status(400).json({ error: err.message || 'Unknown error' });
+  res.status(404).json({ message: "Route not found" });
 }

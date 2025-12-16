@@ -53,8 +53,8 @@ export class EventsRepository {
     // Optional sorting and pagination
     const LIMIT = filters?.limit ? ` LIMIT ${filters?.limit}` : " ";
     const OFFSET = filters?.offset ? ` OFFSET ${filters?.offset}` : " ";
+
     query += ` ORDER BY timestamp DESC ${LIMIT} ${OFFSET}`;
-    console.log("que", query);
 
     return new Promise((resolve, reject) => {
       db.all(query, params, (err, rows) =>

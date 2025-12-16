@@ -1,5 +1,5 @@
-import { v4 as uuid } from 'uuid';
-import { DiagnosticEvent } from './events.model';
+import { v4 as uuid } from "uuid";
+import { DiagnosticEvent } from "./events.model";
 
 export function parseLogLine(line: string): DiagnosticEvent {
   const regex =
@@ -8,7 +8,7 @@ export function parseLogLine(line: string): DiagnosticEvent {
   const match = line.match(regex);
   console.log("match", match);
   if (!match) {
-    throw new Error('Invalid log format');
+    throw new Error("Invalid log format");
   }
 
   return {
@@ -17,6 +17,6 @@ export function parseLogLine(line: string): DiagnosticEvent {
     vehicleId: match[2],
     level: match[3] as any,
     code: match[4],
-    message: match[5]
+    message: match[5],
   };
 }
