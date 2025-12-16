@@ -26,6 +26,9 @@ npm run truncate
 
 http://localhost:3000
 
+## Swagger Setup
+http://localhost:3000/api-docs/#/default/get_events
+
 ## Frontend Setup
 cd fe
 
@@ -38,5 +41,4 @@ ng serve /npm start
 
 http://localhost:4200
 
-## Swagger Setup
-http://localhost:3000/api-docs/#/default/get_events
+
